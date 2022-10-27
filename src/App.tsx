@@ -1,9 +1,15 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import { LadingPage } from "./components/LandingPage";
+import { Dashboard } from "./components/Dashboard";
 
 const App = () => {
   return (
     <div className="App">
-      <h1>Teste</h1>
+      <Routes>
+        <Route path="/" element={<LadingPage />} />
+        <Route path="dashboard" element={<Dashboard />} />
+      </Routes>
     </div>
   );
 };
